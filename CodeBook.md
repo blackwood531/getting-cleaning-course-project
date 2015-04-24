@@ -13,12 +13,13 @@ The study involved each study subject's performing each of six types of activiti
 The dataset contains one row for each type of activity performed by each study subject, as well as averages of the estimated movement vector means and standard deviations.
 
 ## Columns
+The first three columns identify the study subjects, their roles in the study, and the activities they performed. The remaining columns are averages of the study's estimated means and standard deviations. See the site above for detail on these movement vectors and how they were measured. These column names are (almost) the same as the corresponding column names in test/X_test.txt and train/X_train.txt whose values were averaged to create this dataset. Strictly speaking, columns in the original data files are not name in the files; instead they are listed in the file features.txt. The only difference between this dataset's column names and the corresponding names from features.txt is that parentheses. For example, tBodyAcc.mean.X in this dataset corresponds to tBodyAcc.mean().X in features.txt.
+
+Columns whose names include "Acc" (for acceleration) are in standard gravity units 'g', and those with "Gyro" (for gyroscope) are in radians/sec.
+
 1. subject - Integer that identifies a subject in the study
 1. role - Takes the value "train" or "test" to indicate the subject's role in the study (source of training or test data, respectively)
 1. activity - identifies the type of activity
-
-The remaining columns are averages of the study's estimated means and standard deviations. See the site above for detail on these movement vectors and how they were measured. These column names are (almost) the same as the corresponding column names in test/X_test.txt and train/X_train.txt whose values were averaged to create this dataset. Strictly speaking, columns in the original data files are not name in the files; instead they are listed in the file features.txt. The only difference between this dataset's column names and the corresponding names from features.txt is that parentheses. For example, tBodyAcc.mean.X in this dataset corresponds to tBodyAcc.mean().X in features.txt.
-
 1. tBodyAcc.mean.X              
 1. tBodyAcc.mean.Y              
 1. tBodyAcc.mean.Z              
