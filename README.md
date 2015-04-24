@@ -27,3 +27,6 @@ This readme provides information about the run_analysis.R script for this projec
  1. "cast" turns out the be the opposite of "melt" - the script uses case to convert the means data frame into a wide format
  1. Finally, the script write outs the tidy data set
 
+## Notes
+* I'm a bit uncertain about this dataset - averaging standard deviations doesn't usually make sense, right? But maybe the original estimates qualify as observations that can be subjected to simple summaries. Then again, this assignment is about tidying data, so maybe I'm worrying too much much about such details ... knowing that I may be missing something, full speed ahead ...
+

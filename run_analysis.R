@@ -39,8 +39,8 @@ trainy <- read.table("UCI HAR Dataset/train/y_train.txt")
 factrainy <- factor(trainy[,1], labels=activities$V2)
 
 ## add columns for activity, subject and role (test or train)
-train <- data.frame(subject=trainsubj[,1],activity=factrainy,role="train",train)
-test <- data.frame(subject=testsubj[,1],activity=factesty,role="test",test)
+train <- data.frame(subject=trainsubj[,1],role="train",activity=factrainy,train)
+test <- data.frame(subject=testsubj[,1],role="test",activity=factesty,test)
 
 ## paste the two frames together
 ucihar1 <-rbind(test,train)
@@ -48,13 +48,6 @@ ucihar1 <-rbind(test,train)
 ## it's a nit, but should make the data a little easier to work with
 ## without this, the measurement column names look like tBodyAcc.mean...X
 colnames(ucihar1) <- gsub("\\.\\.","",colnames(ucihar1))
-
-## I don't really understand this data - averaging standard deviations
-## doesn't usually make sense, right? But maybe these estimates qualify
-## as observations that can be subjected to standard simple summaries
-## then again, this assignment is about tidying data, so maybe I'm worrying
-## too much much about such details ... knowing that I may be missing something
-## about the problem statement, full speed ahead ...
 
 ## Next step is to make the second tidy data set, using melt to avoid
 ## typing 80 variable names
