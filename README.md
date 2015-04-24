@@ -12,7 +12,7 @@ This readme provides information about the run_analysis.R script for this projec
  1. First, the script reads features.txt to get all the feature names
  1. Then it uses the grep function to discover the ones we want (with "mean" or "std" in the name). These are called "keepers".
  1. Next it reads the training and test data files into data frames called "train" and "test"
- 1. Then uses the list of keeper columns to filter out the unwanted columns
+ 1. Then it narrows train and test down to just the keeper columns
  1. This phase concludes by setting the column names in train and test to the keeper names
 1. Add columns for the subjects, roles and activities, and combine the data for training and test subjects into one data frame
  1. First, the script reads the training and testing subject data (these are single-column files, parallel to the main data files)
